@@ -9,7 +9,7 @@ import { ContactStep, contactStepSchema } from "./contact-step";
 import { PlanStep, planStepSchema } from "./plan-step";
 
 export function RegistrationForm() {
-  const [step, setStep] = useState<1 | 2 | 3 | 4>(3);
+  const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
   const [infoStepData, setInfoStepData] =
     useState<z.infer<typeof infoStepSchema>>();
   const [contactStepData, setContactStepData] =
