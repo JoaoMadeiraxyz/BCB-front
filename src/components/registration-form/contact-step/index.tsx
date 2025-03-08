@@ -1,6 +1,6 @@
 import { z } from "zod";
-import Input from "../../input";
-import Button from "../../button";
+import Input from "@/app/components/input";
+import Button from "@/app/components/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Dispatch, SetStateAction } from "react";
@@ -40,7 +40,7 @@ export function ContactStep({
   setContactStepData: Dispatch<
     SetStateAction<z.infer<typeof contactStepSchema> | undefined>
   >;
-  setStep: Dispatch<SetStateAction<1 | 2 | 3>>;
+  setStep: Dispatch<SetStateAction<1 | 2 | 3 | 4>>;
   contactStepData: z.infer<typeof contactStepSchema> | undefined;
 }) {
   const {

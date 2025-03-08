@@ -6,13 +6,16 @@ import { z } from "zod";
 
 import { infoStepSchema } from "./info-step";
 import { ContactStep, contactStepSchema } from "./contact-step";
+import { PlanStep, planStepSchema } from "./plan-step";
 
 export function RegistrationForm() {
-  const [step, setStep] = useState<1 | 2 | 3>(1);
+  const [step, setStep] = useState<1 | 2 | 3 | 4>(3);
   const [infoStepData, setInfoStepData] =
     useState<z.infer<typeof infoStepSchema>>();
   const [contactStepData, setContactStepData] =
     useState<z.infer<typeof contactStepSchema>>();
+  const [planStepData, setPlanStepData] =
+    useState<z.infer<typeof planStepSchema>>();
 
   useEffect(() => {
     console.log({ infoStepData });
@@ -38,6 +41,14 @@ export function RegistrationForm() {
         <ContactStep
           contactStepData={contactStepData}
           setContactStepData={setContactStepData}
+          setStep={setStep}
+        />
+      )}
+
+      {step === 3 && (
+        <PlanStep
+          planStepData={planStepData}
+          setPlanStepData={setPlanStepData}
           setStep={setStep}
         />
       )}
