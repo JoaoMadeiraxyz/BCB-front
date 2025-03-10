@@ -1,6 +1,6 @@
 import { z } from "zod";
-import Input from "@/app/components/input";
-import Button from "@/app/components/button";
+import Input from "@/components/ui/input";
+import Button from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Dispatch, SetStateAction } from "react";
@@ -13,11 +13,11 @@ export const infoStepSchema = z
     email: z.string().email({
       message: "Certifique-se de inserir um email válido.",
     }),
-    password: z.string().min(8, {
-      message: "A senha deve conter no mínimo 8 caracteres.",
+    password: z.string().min(6, {
+      message: "A senha deve conter no mínimo 6 caracteres.",
     }),
-    confirmPassword: z.string().min(8, {
-      message: "A senha deve conter no mínimo 8 caracteres.",
+    confirmPassword: z.string().min(6, {
+      message: "A senha deve conter no mínimo 6 caracteres.",
     }),
   })
   .superRefine((data, ctx) => {

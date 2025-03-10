@@ -1,6 +1,6 @@
 import { z } from "zod";
-import Input from "@/app/components/input";
-import Button from "@/app/components/button";
+import Input from "@/components/ui/input";
+import Button from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Dispatch, SetStateAction } from "react";

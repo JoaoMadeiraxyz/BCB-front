@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "@/contexts/auth-context";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -14,14 +15,20 @@ export const metadata: Metadata = {
     "O mais novo e interessante enviador de SMS e outras mensagens brasileiro.",
 };
 
+function ClientWrapper({ children }: { children: React.ReactNode }) {
+  return <AuthProvider>{children}</AuthProvider>;
+}
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="pt-br">
-      <body className={`${poppins.variable} antialiased`}>{children}</body>
+      <body className={`${poppins.variable} antialiased`}>
+        <ClientWrapper>{children}</ClientWrapper>
+      </body>
     </html>
   );
 }
