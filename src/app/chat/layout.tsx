@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <SidebarProvider>
       <AppSidebar />
-      <div className={`${poppins.variable} !px-8 !py-5 antialiased`}>
+      <div className={`${poppins.variable} w-full !px-8 !py-5 antialiased`}>
         <SidebarTrigger />
         <ClientWrapper>{children}</ClientWrapper>
       </div>

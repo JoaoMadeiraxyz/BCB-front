@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 import { UserData } from "@/types/user";
+import { Message } from "@/types/message";
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
@@ -11,10 +12,11 @@ type User = {
   name: string;
   email: string;
   telefone?: string;
-  cpf?: string;
-  cnpj?: string;
-  companyName?: string;
+  cpf: string;
+  cnpj: string;
+  companyName: string;
   plan: string;
+  messages: Message[];
 };
 
 type AuthState = {

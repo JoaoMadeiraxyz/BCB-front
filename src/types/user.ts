@@ -1,4 +1,6 @@
-export interface UserData {
+import { Message } from "./message";
+
+export type UserData = {
   name: string;
   email: string;
   password: string;
@@ -7,4 +9,5 @@ export interface UserData {
   cnpj: string;
   companyName: string;
   plan: string;
-}
+  messages: Message[];
+};
