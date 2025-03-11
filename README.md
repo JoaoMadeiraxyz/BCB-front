@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Big Chat Brasil - Frontend
 
-## Getting Started
+Bem-vindo ao repositório do frontend do **Big Chat Brasil**, um projeto de envio de mensagens desenvolvido em Next.js.
 
-First, run the development server:
+## Requisitos
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Antes de iniciar, certifique-se de ter instalado em sua máquina:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Node.js](https://nodejs.org/) (versão recomendada: LTS)
+- [Git](https://git-scm.com/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Instalação
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Siga os passos abaixo para configurar o projeto em sua máquina:
 
-## Learn More
+1. **Clone o repositório do frontend:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```sh
+   git clone https://github.com/JoaoMadeiraxyz/BCB-front.git
+   cd BCB-front
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Instale as dependências:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```sh
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Clone o repositório do backend:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   O backend é essencial para o funcionamento do projeto. Clone o repositório e siga as instruções do README dentro do repositório do backend.
+   https://github.com/JoaoMadeiraxyz/BCB-api
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Inicie o banco de dados**
+
+   Siga as instruções do repositório backend para configurar e iniciar o banco de dados corretamente.
+
+5. **Inicie o frontend:**
+
+   ```sh
+   npm run dev
+   ```
+
+6. **Acesse a aplicação**
+
+   Depois de iniciar o frontend, abra o navegador e acesse:
+
+   ```
+   http://localhost:3000
+   ```
