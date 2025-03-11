@@ -42,7 +42,7 @@ export function RegistrationForm() {
               password: infoStepData.password,
             });
             await fetchUser();
-            router.push("/mensagens");
+            router.push("/chat/mensagens");
           } catch (err: any) {
             setError(err.response?.data?.message || "Erro no cadastro");
           }

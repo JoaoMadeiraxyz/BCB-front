@@ -53,7 +53,7 @@ export function LoginForm() {
   useEffect(() => {
     if (accessToken) {
       fetchUser();
-      router.push("/mensagens");
+      router.push("/chat/mensagens");
     }
   }, [accessToken, router]);
 
