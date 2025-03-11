@@ -1,4 +1,4 @@
-import { ArrowLeftFromLine, Home, Plus, Settings } from "lucide-react";
+import { ArrowLeftFromLine, Home, Settings } from "lucide-react";
 
 import {
   Sidebar,
@@ -13,6 +13,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import CreateMessageModal from "../create-message-modal";
+import { SignoutButton } from "./signout-button";
 
 // Menu items.
 const items = [
@@ -75,10 +76,7 @@ export function AppSidebar() {
 
                 <SidebarMenuItem>
                   <SidebarMenuButton asChild>
-                    <button className="cursor-pointer">
-                      <ArrowLeftFromLine />
-                      Sair
-                    </button>
+                    <SignoutButton />
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               </SidebarMenu>
