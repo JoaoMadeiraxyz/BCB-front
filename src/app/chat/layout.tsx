@@ -4,6 +4,7 @@ import "../globals.css";
 import { AuthProvider } from "@/contexts/auth-context";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/ui/app-sidebar";
+import { Toaster } from "@/components/ui/sonner";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -32,6 +33,7 @@ export default function RootLayout({
       <div className={`${poppins.variable} w-full !px-8 !py-5 antialiased`}>
         <SidebarTrigger />
         <ClientWrapper>{children}</ClientWrapper>
+        <Toaster />
       </div>
     </SidebarProvider>
   );

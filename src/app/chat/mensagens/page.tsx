@@ -21,7 +21,6 @@ export default function Messages() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>ID</TableHead>
               <TableHead>Telefone</TableHead>
               <TableHead>Conteúdo</TableHead>
               <TableHead>Tipo</TableHead>
@@ -31,10 +30,9 @@ export default function Messages() {
             {user?.messages && user.messages.length > 0 ? (
               user.messages.map((message) => (
                 <TableRow key={message.id}>
-                  <TableCell>{message.id}</TableCell>
                   <TableCell>{message.telefone}</TableCell>
                   <TableCell>{message.content}</TableCell>
-                  <TableCell>{message.type}</TableCell>
+                  <TableCell className="capitalize">{message.type}</TableCell>
                 </TableRow>
               ))
             ) : (

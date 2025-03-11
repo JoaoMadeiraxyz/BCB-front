@@ -12,6 +12,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import CreateMessageModal from "../create-message-modal";
 
 // Menu items.
 const items = [
@@ -36,8 +37,8 @@ export function AppSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Big Chat Brasil</SidebarGroupLabel>
-          <SidebarGroupAction title="Add Project" className="cursor-pointer">
-            <Plus /> <span className="sr-only">Add Project</span>
+          <SidebarGroupAction>
+            <CreateMessageModal />
           </SidebarGroupAction>
           <SidebarGroupContent>
             <SidebarMenu>
