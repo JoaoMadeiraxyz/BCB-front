@@ -1,4 +1,4 @@
-import { ArrowLeftFromLine, Home, Settings } from "lucide-react";
+import { Home, Settings } from "lucide-react";
 
 import {
   Sidebar,
@@ -27,7 +27,7 @@ const items = [
 const footerItems = [
   {
     title: "Configurações",
-    url: "#",
+    url: "/chat/configuracoes",
     icon: Settings,
   },
 ];

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Dispatch, SetStateAction } from "react";
+import Link from "next/link";
 
 export const infoStepSchema = z
   .object({
@@ -111,7 +112,9 @@ export function InfoStep({
           </Button>
           <p className="text-sm">
             Já é um usuário? Entre em sua conta{" "}
-            <span className="text-indigo-600">aqui</span>
+            <Link href={"/"} className="text-indigo-600">
+              aqui
+            </Link>
           </p>
         </div>
       </fieldset>

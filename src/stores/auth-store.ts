@@ -16,6 +16,9 @@ type User = {
   cnpj: string;
   companyName: string;
   plan: string;
+  credits: number;
+  limit: number;
+  amountToPay: number;
   messages: Message[];
 };
 

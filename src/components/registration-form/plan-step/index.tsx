@@ -24,6 +24,7 @@ export function PlanStep({
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm({
     resolver: zodResolver(planStepSchema),
     defaultValues: {
@@ -51,7 +52,12 @@ export function PlanStep({
           Selecione o plano de pagamento.
         </p>
 
-        <RadioGroup defaultValue="pre-pago">
+        <RadioGroup
+          onValueChange={(value: "pre-pago" | "pos-pago") =>
+            setValue("plan", value)
+          }
+          defaultValue="pre-pago"
+        >
           <div className="flex w-full flex-row justify-between gap-3.5">
             <div className="flex min-h-64 w-1/2 flex-col gap-2 rounded-lg border border-slate-200 p-4">
               <div className="flex items-center gap-2">

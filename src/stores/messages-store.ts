@@ -91,11 +91,15 @@ export const useMessagesStore = create<MessagesState>((set) => ({
 
     set({ loading: true, error: null });
     try {
-      await api.post("/messages/pay-bill", {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
+      await api.post(
+        "/messages/pay-bill",
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
         },
-      });
+      );
     } catch (error: any) {
       set({
         error: error.response?.data?.message || "Failed to pay bill",

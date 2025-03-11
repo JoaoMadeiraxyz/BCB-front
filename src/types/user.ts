@@ -9,5 +9,8 @@ export type UserData = {
   cnpj: string;
   companyName: string;
   plan: string;
-  messages: Message[];
+  credits?: number;
+  limit?: number;
+  amountToPay?: number;
+  messages?: Message[];
 };

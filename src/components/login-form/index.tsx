@@ -8,6 +8,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const loginSchema = z.object({
   email: z.string().email("Email inválido"),
@@ -97,7 +98,9 @@ export function LoginForm() {
           </Button>
           <p className="text-sm">
             Não possui conta? Registre-se{" "}
-            <span className="text-indigo-600">aqui</span>
+            <Link href={"/register"} className="text-indigo-600">
+              aqui
+            </Link>
           </p>
         </div>
       </fieldset>
