@@ -1,8 +1,8 @@
 "use client";
 
 import { useAuthStore } from "@/stores/auth-store";
-import Input from "@/components/ui/input";
-import Button from "@/components/ui/button";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -88,7 +88,11 @@ export function LoginForm() {
         {formError && <p className="text-sm text-red-500">{formError}</p>}
 
         <div className="flex w-full flex-col items-center justify-center gap-2.5">
-          <Button type="submit" disabled={loading} className="font-bold">
+          <Button
+            type="submit"
+            disabled={loading}
+            className="w-full cursor-pointer bg-indigo-600 font-bold hover:bg-indigo-500"
+          >
             {loading ? "Carregando..." : "ENTRAR"}
           </Button>
           <p className="text-sm">

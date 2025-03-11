@@ -1,6 +1,6 @@
 import { z } from "zod";
-import Input from "@/components/ui/input";
-import Button from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Dispatch, SetStateAction } from "react";
@@ -111,7 +111,10 @@ export function ContactStep({
         </div>
 
         <div className="flex w-full flex-col items-center justify-center gap-2.5">
-          <Button type="submit" className="font-bold">
+          <Button
+            type="submit"
+            className="w-full cursor-pointer bg-indigo-600 font-bold hover:bg-indigo-500"
+          >
             AVANÇAR
           </Button>
           <button

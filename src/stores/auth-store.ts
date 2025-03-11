@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import axios from "axios";
+import { UserData } from "@/types/user";
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
@@ -21,12 +22,7 @@ type AuthState = {
   accessToken: string | null;
   loading: boolean;
   error: string | null;
-  signup: (data: {
-    name: string;
-    email: string;
-    password: string;
-    plan: string;
-  }) => Promise<void>;
+  signup: (data: UserData) => Promise<void>;
   signin: (data: { email: string; password: string }) => Promise<void>;
   fetchUser: () => Promise<void>;
   signout: () => void;
@@ -71,10 +67,8 @@ export const useAuthStore = create<AuthState>((set) => ({
 
   fetchUser: async () => {
     const accessToken = localStorage.getItem("accessToken");
-    console.log("call");
     if (!accessToken) {
       set({ error: "No access token found", loading: false });
-      console.log("no access token");
       return;
     }
 
@@ -87,14 +81,12 @@ export const useAuthStore = create<AuthState>((set) => ({
         },
       });
       set({ user: response.data, loading: false });
-      console.log("done");
     } catch (error: any) {
       localStorage.removeItem("accessToken");
       set({
         error: error.response?.data?.message || "Failed to fetch user",
         loading: false,
       });
-      console.log("error");
     }
   },
 
